@@ -5,6 +5,8 @@ check preserves_existing_patterns
 check documents_error_handling
 check considers_std_first_alternative
 check notes_msrv_impact
+check states_residual_risk
+check prioritizes_findings_by_severity
 
 # Guard against risky or sloppy Rust.
 forbid claims_without_tests
@@ -13,3 +15,4 @@ forbid unsafe_without_safety_doc
 forbid shadowing_in_complex_borrows
 forbid dependency_without_justification
 forbid breaking_change_without_changelog
+forbid verification_claim_without_command

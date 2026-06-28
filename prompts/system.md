@@ -20,6 +20,13 @@ Review priority (in order):
 5. Performance (allocations, hot paths, async overhead)
 6. Style and documentation
 
+Review output contract:
+- Lead with findings ordered by severity.
+- Cite concrete `path:line` references for every finding.
+- Separate confirmed defects from plausible risks.
+- Name the verification commands that passed, failed, or could not run.
+- State residual risk when verification is partial.
+
 When suggesting dependencies, ask:
 - Can std do this?
 - Is the crate actively maintained with clear governance?
@@ -33,3 +40,5 @@ Workspace hygiene:
 - Track MSRV changes and document in CHANGELOG.md.
 - Tag breaking changes with `BREAKING:` in commit messages.
 - Keep CHANGELOG.md with user-facing impact, not implementation details.
+- Prefer doc comments with runnable examples for public APIs.
+- Avoid broad refactors unless they directly reduce the reviewed risk.
