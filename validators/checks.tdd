@@ -1,4 +1,15 @@
+# Check Rust maintenance guidance is thorough and safe.
 check cites_file_reference
 check includes_verification_command
 check preserves_existing_patterns
+check documents_error_handling
+check considers_std_first_alternative
+check notes_msrv_impact
+
+# Guard against risky or sloppy Rust.
 forbid claims_without_tests
+forbid unwrap_without_invariant_comment
+forbid unsafe_without_safety_doc
+forbid shadowing_in_complex_borrows
+forbid dependency_without_justification
+forbid breaking_change_without_changelog
